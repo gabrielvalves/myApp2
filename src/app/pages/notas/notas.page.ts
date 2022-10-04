@@ -1,19 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-notas',
+  templateUrl: './notas.page.html',
+  styleUrls: ['./notas.page.scss'],
 })
-export class HomePage {
+export class NotasPage implements OnInit {
 
   constructor(private navctrl: NavController) {}
 
+  ngOnInit() {
+  }
 
   showPageInicio(){
     this.navctrl.navigateForward('home');
   }
+
   showPageCalendario(){
     this.navctrl.navigateForward('calendario');
   }

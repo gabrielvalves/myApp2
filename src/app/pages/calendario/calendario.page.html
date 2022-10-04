@@ -1,8 +1,20 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Controle Acadêmico</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Calendário</ion-title>
+  </ion-toolbar>
+  <ion-toolbar id="x" color="white">
+    <code *ngIf="result"> {{ result }} </code>
   </ion-toolbar>
 </ion-header>
+
+<div class="container">
+
+  <ion-tab-button (click)="actionsheet()">Open</ion-tab-button>
+</div>
+
 <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="inicio" (click)='showPageInicio()'>
